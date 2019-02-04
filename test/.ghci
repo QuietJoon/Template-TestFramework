@@ -1,0 +1,14 @@
+:set -XOverloadedStrings
+:set -XTemplateHaskell
+:set -XCPP
+:set -i.:../src
+
+:set -package HUnit
+:set -package QuickCheck
+:set -package silently
+:set -package test-framework
+:set -package test-framework-hunit
+:set -package test-framework-quickcheck2
+:set -package test-framework-th
+
+:load Spec.hs

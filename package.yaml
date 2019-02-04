@@ -1,0 +1,41 @@
+name:                Template-TestFramework
+version:             0.0.0.1
+github:              "QuietJoon/Template-TestFramework"
+license:             BSD3
+author:              "YongJoon Joe"
+maintainer:          "developer@yongjoon.net"
+copyright:           "2019 YongJoon Joe"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# synopsis:            Short description of your package
+# category:            Web
+description:         Please see the README on GitHub at <https://github.com/QuietJoon/Template-TestFramework#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+tests:
+  TestFramework-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    default-extensions:
+    - TemplateHaskell
+    dependencies:
+    - Template-TestFramework
+    - HUnit
+    - QuickCheck
+    - silently
+    - test-framework
+    - test-framework-hunit
+    - test-framework-quickcheck2
+    - test-framework-th
